@@ -38,16 +38,39 @@ p {
 
 }
 
-.button-extern-link {
+.button-extern-link a{
     padding: 15px 30px;
-    background-color: #2F4F4F;
     text-align: center;
-    color: white;
     text-decoration: none;
     display: block;
     font-weight: 700;
     font-size: 1.2em;
-    margin: 0px 200px
+    margin: 0px 200px 10px 200px;
+}
+
+.button-extern-link a:link{
+    background-color: #2F4F4F;
+    color: white;
+}
+
+.button-extern-link a:active{
+    background-color: #2F4F4F;
+    color: white;
+}
+
+.button-extern-link a:visited{
+    background-color: #2F4F4F;
+    color: white;
+}
+
+.button-extern-link a:hover{
+    color: #2F4F4F;
+    background-color: white;
+}
+
+.button-extern-link a:focus{
+    color: #2F4F4F;
+    background-color: white;
 }
 
 .main-titles {
@@ -57,8 +80,9 @@ p {
 }
 
 #whole-page {
-    margin: 0px 150px 0px 150px;
+    margin: 0px 150px 50px 150px;
     background-color:#8DB6CD;
+    padding: 20px;
 }
 
 #selfie {
@@ -74,8 +98,34 @@ p {
     clear:both;
 }
 
-.lista {
+.menu {
     padding: 15px 25px 25px 15px;
-    font-size: 1.2em
-    
+    font-size: 1.2em;
+    display: inline-block;
+    margin:auto;
+           
+}
+
+.menu a {
+    background-color: white;
+    padding: 5px 15px;
+    text-decoration: none;
+}
+
+.menu a:link{
+    color:black;
+}
+
+.menu a:visited{
+    color: black;
+}
+
+.menu a:hover{
+    color:white;
+    background-color: black;
+}
+
+.menu a:focus{
+    color:white;
+    background-color: black;
 }
