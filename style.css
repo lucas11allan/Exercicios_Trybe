@@ -66,14 +66,11 @@ p {
 .button-extern-link a:hover{
     color: #2F4F4F;
     background-color: white;
-<<<<<<< HEAD
 }
 
 .button-extern-link a:focus{
     color: #2F4F4F;
     background-color: white;
-=======
->>>>>>> 3b5ed1df40251a345669b056c0e82660f8f360ed
 }
 
 .button-extern-link a:focus{
