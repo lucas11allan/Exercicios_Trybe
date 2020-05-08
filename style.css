@@ -74,8 +74,34 @@ p {
     clear:both;
 }
 
-.lista {
+.menu {
     padding: 15px 25px 25px 15px;
-    font-size: 1.2em
-    
+    font-size: 1.2em;
+    display: inline-block;
+    margin:auto;
+           
+}
+
+.menu a {
+    background-color: white;
+    padding: 5px 15px;
+    text-decoration: none;
+}
+
+.menu a:link{
+    color:black;
+}
+
+.menu a:visited{
+    color: black;
+}
+
+.menu a:hover{
+    color:white;
+    background-color: black;
+}
+
+.menu a:focus{
+    color:white;
+    background-color: black;
 }
