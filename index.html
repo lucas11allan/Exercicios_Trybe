@@ -3,94 +3,58 @@
     <head>
         <meta charset="utf-8">
         <title>Portfólio Web</title>
-        <style>
-            #name {
-                font-family: "Verdana", sans-serif;
-                text-align: center;
-                background-color: white;
-            }
+        <link rel="stylesheet" type="text/css" href="style.css">
 
-            .text-class{
-                font-family: "Tahoma", sans-serif;
-            }
-
-            body {
-                background-color: aquamarine;
-            }
-
-            .highlights {
-                color: #363636;
-            }
-
-            .size1 {
-                font-size: 1.25em;
-            }
-
-            .size2 {
-                font-size: 1.5em;
-            }
-
-            .round-pictures {
-                border-radius: 100%;
-                display: block;
-                margin-left: auto;
-                margin-right: auto
-            }
-
-            .button-extern-link {
-                padding: 15px 30px;
-                background-color: #2F4F4F;
-                text-align: center;
-                color: white;
-                text-decoration: none;
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                font-weight: 700;
-                font-size: 1.2em;
-            }
-
-            .main-titles {
-                background-color: white;
-                padding: 15px;
-                text-align: center;
-            }
-
-        </style>
     </head>
     <body>
-        <h1 id="name">Lucas Allan Almeida Oliveira</h1>
-            <img class ="round-pictures" id="selfie" src="images/lucas-allan.jpeg" alt="Selfie de Lucas Allan" width="400">
-            <h2 class="main-titles" id="aboutme">About me</h2>
-                <p class="text-class">
-                    I was born in <em class="highlights">Brazil</em>, in Presidente Epitácio city, in 1991. <strong>Nowadays</strong> I live in Belo Horizonte-MG and I want to become a web developer
-                </p>
-             <h2 class="main-titles" id="skills">Skills</h2>
-                <ul>
-                    <li class="size1">AutoCad</li>
-                    <li><em class="size2">Excel</em></li>
-                    <li>JavaScript</li>
-                    <li>HTML</li>
-                </ul>
-            <a href="#selfie">
-                <h3>
-                     Veja a minha selfie clicando aqui
-                </h3>
-            </a>
-            <h2 class="main-titles" id="linkexterno">
-                Links Externos
-            </h2>
-                <a class="button-extern-link" target="_blank" href="https://blog.umbler.com/br/comandos-do-git-para-desenvolvedores/">
-                    5 comandos do git que todo mundo deveria saber
-                </a>
-            <h2 class="main-titles">
-                Vá para
-            </h2>
-                <ol>
-                    <a href="#aboutme"><li>About me</li></a>
-                    <a href="#skills"><li>Skills</li></a>
-                    <a href="#linkexterno"><li>Links Externos</li></a>
-                </ol>
-
+        <div id="whole-page">
+                <div>     
+                    <h1 id="name">Lucas Allan Almeida Oliveira</h1>
+                </div>
+                <div>
+                    <img class ="round-pictures" id="selfie" src="images/lucas-allan.jpeg" alt="Selfie de Lucas Allan" width="400">
+                </div>
+                <div class="float-right">    
+                    <h2 class="main-titles" id="aboutme">About me</h2>
+                        <p class="text-class">
+                            I was born in <em class="highlights">Brazil</em>, in Presidente Epitácio city, in 1991. <strong>Nowadays</strong> I live in Belo Horizonte-MG and I want to become a web developer
+                        </p>
+                </div> 
+                <div>
+                    <h2 class="main-titles" id="skills">Skills</h2>
+                        <ul>
+                            <li class="size1">AutoCad</li>
+                            <li><em class="size2">Excel</em></li>
+                            <li>JavaScript</li>
+                            <li>HTML</li>
+                        </ul>
+                    <a href="#selfie">
+                        <h3 style="text-align: center">
+                            Veja a minha selfie clicando aqui
+                        </h3>
+                    </a>
+                </div>
+                <div>
+                    <h2 class="main-titles" id="linkexterno">
+                        Links Externos
+                    </h2>
+                        <a class="button-extern-link" target="_blank" href="https://blog.umbler.com/br/comandos-do-git-para-desenvolvedores/">
+                            5 comandos do git que todo mundo deveria saber
+                        </a>
+                </div>
+                <div>
+                    <h2 class="main-titles">
+                        Vá para
+                    </h2>
+                        <div class="lista">
+                            <ol>
+                                <a href="#aboutme"><li>About me</li></a>
+                                <a href="#skills"><li>Skills</li></a>
+                                <a href="#linkexterno"><li>Links Externos</li></a>
+                            </ol>
+                
+                        </div>
+                </div>
+        </div>
     </body>
 </html>
