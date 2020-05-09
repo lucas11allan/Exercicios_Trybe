@@ -1,11 +1,25 @@
-.head{
+.header{
+    background-color: #0000CD;
+    color: white;
+    text-align: center;
+    padding: 10px 0px;
 
 }
 
 .navigation-menu{
+    font-size: 1.4em;
+    text-decoration: none;
+    padding: 10px 5px;
 
 }
 
+.navigation-menu a
+
 .images {
     width: 30%;
+}
+
+.body {
+    margin: 0% 20%;
+    font-family: monospace;
 }
