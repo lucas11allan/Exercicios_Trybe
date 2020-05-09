@@ -45,8 +45,29 @@
     background-color: #0000CD;
 }
 
+.main-title{
+    background-color: white;
+    color: #0000CD;
+    text-align: center;
+    padding: 4px 0px;
+    font-size: 1.5em;
+    border: 1px solid #0000CD;
+    margin: 0px;
+}
+
+article h3{
+    background-color: #0000CD;
+    color: white;
+    text-align: center;
+    padding: 4px 0px;
+    font-size: 1.3em;
+    margin: 3px 0px;
+}
+
 .images {
     width: 30%;
+    margin: auto;
+    
 }
 
 .body {
