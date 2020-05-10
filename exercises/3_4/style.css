@@ -77,7 +77,9 @@ article table td,th{
 
 .images {
     width: 30%;
-   
+   display: block;
+   margin: auto;
+   padding: 15px;
     
 }
 
