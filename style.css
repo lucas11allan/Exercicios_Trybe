@@ -39,7 +39,7 @@ p {
 }
 
 .button-extern-link a{
-    padding: 15px 30px;
+    padding: 15px 30px;o
     text-align: center;
     text-decoration: none;
     display: block;
@@ -66,6 +66,7 @@ p {
 .button-extern-link a:hover{
     color: #2F4F4F;
     background-color: white;
+
 }
 
 .button-extern-link a:focus{
