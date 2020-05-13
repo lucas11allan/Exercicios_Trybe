@@ -1,6 +1,6 @@
-let pecaXadrez = "";
+let pecaXadrez = "BISPO";
 
-pecaXadrez.toLocaleLowerCase();
+pecaXadrez = pecaXadrez.toLowerCase();
 
 switch(pecaXadrez){
   case 'peão':
