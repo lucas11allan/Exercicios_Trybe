@@ -1,4 +1,4 @@
-let notaPorcentagem = 10;
+let notaPorcentagem = 85;
 
 if(notaPorcentagem>100 && notaPorcentagem<0){
   console.log("Insira uma nota válida entre 0 e 100!!!");
