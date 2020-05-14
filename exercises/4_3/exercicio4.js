@@ -1,6 +1,7 @@
 let n = 9;
 let asterisco = "";
 let espaco = "";
+let impressao = "";
 let i = 0;
 let j = 0;
 let k = 0;
@@ -20,7 +21,7 @@ for (i = 1; i <= n; i += 2){
       espaco += " ";
     }
   }
-  
-  asterisco = espaco + asterisco + espaco;
-  console.log(asterisco);
+
+  impressao = espaco + asterisco + espaco;
+  console.log(impressao);
 }
