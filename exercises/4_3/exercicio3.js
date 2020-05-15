@@ -1,17 +1,22 @@
-let n = 5;
+let n = 7;
 let asteriscos = "";
+let espacos = "";
 let i = 0;
 let j = 0;
+let k = 0;
 
-for(i = 1; i <= n; i += 1){
+for (i = 1; i <= n; i += 1){
   asteriscos = "";
-  for(j = n; j >= 1; j -= 1){
-    if(i<j){
-      asteriscos += " ";
-    }else{
-      asteriscos += "*";
-    }
+  espacos = "";
+  
+  for(j = 1; j <= i; j += 1){
+    asteriscos += "*";
   }
-  console.log(asteriscos);
+
+  for(k = n; k >= j; k -= 1){
+    espacos += " ";
+  }
+
+  console.log(espacos + asteriscos);
 }
 
