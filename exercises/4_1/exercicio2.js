@@ -1,4 +1,6 @@
-let a = 2;
-let b = 5;
-let resultado = a - b;
-console.log(resultado);
+function diminuir (a, b){
+  let resultado = a - b;
+  console.log(resultado);
+}
+
+diminuir (5, 3);
