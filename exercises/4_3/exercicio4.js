@@ -8,6 +8,8 @@ let k = 0;
 
 //esse primeiro 'for' imprimi uma linha do triângulo a cada loop
 for (i = 1; i <= n; i += 2){
+
+  //as variaveis são 'resetadas' para poderem ser utilizadas novamente
   asterisco = "";
   espaco = "";
 
