@@ -3,11 +3,21 @@ let numeroMaisRepete = 0;
 
 function retornaNumMaisRepete(arrayNumeros){
   let vezesRepete = 0;
-  let pxmNumero = 0;
-  
+  let vezesRepeteAnterior = 0;
+
   for(let indice in arrayNumeros){
-    if(arrayNumeros[indice] = pxmNumero){
-      vezesRepete += ;
+    vezesRepeteAnterior = vezesRepete;
+    vezesRepete = 0;
+
+    for(let indice2 in arrayNumeros){
+
+      if(arrayNumeros[indice] === arrayNumeros[indice2]){
+        vezesRepete += 1; 
+      }
+    }
+
+    if (vezesRepete > vezesRepeteAnterior){
+      numeroMaisRepete = arrayNumeros[indice];
     }
   }
 
