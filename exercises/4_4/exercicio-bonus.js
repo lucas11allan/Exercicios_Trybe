@@ -51,6 +51,14 @@ function converteRomanoArabico(numRomano){
 
     }else if(arrayArabico[posicao] < arrayArabico[(posicao - 1)]){
       numConvertido += arrayArabico[posicao];
+
+    //Faz as comparações do número atual com o próximo
+    if(arrayArabico[(posicao + 1)] === ""){
+      break;
+    }else if(arrayArabico[posicao] < arrayArabico[(posicao + 1)] && arrayArabico[posicao] < arrayArabico[(posicao-1)]){
+      numConvertido += (arrayArabico[(posicao +1)] - arrayArabico[posicao]);
+      posicao += 1;
+
     }
 
   }
