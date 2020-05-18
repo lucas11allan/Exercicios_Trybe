@@ -45,7 +45,7 @@ for (i = 1; i <= n; i += 2){
       }
       
       //Nesse segundo 'for' eu construo uma variável com a quantidade de espaço interno da linha 'i'
-      //como é para começar com um espaço é necessário colocar o limite como '(i-1)', pois a primeira linha fio feita em outra parte do código
+      //como é para começar com um espaço é necessário colocar o limite como '(i-1)', pois a primeira linha foi feita em outra parte do código
       for(m = 1; m < (i - 1); m += 1){
           espacoInterno += " "; 
       }

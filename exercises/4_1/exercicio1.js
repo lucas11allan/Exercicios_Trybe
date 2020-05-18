@@ -1,4 +1,6 @@
-let a = 2;
-let b = 5;
-let resultado = a + b;
-console.log(resultado);
+function somar (a, b){
+  let resultado = a + b;
+  console.log(resultado);
+}
+
+somar (2, 5);
