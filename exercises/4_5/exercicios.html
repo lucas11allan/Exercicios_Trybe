@@ -37,11 +37,11 @@
         <p>Trybe</p>
       </div>
     </div>
-    <div>
-      <ol id="list">
+    
+    <ul id="list">
 
-      </ol>
-    </div>
+    </ul>
+    
     <script>
         /*
         Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
@@ -76,19 +76,10 @@
       }
       changeTitle()
 
-      function changeToUpperCase() {
-        let element = document.getElementsByTagName("p");
-        for(i in element){
-          console.log(element[i].innerHTML);
-        }
-        
-      }
-      changeToUpperCase()
-
       function printTagsP(){
         let element = document.getElementsByTagName("p");
         for(i in element){
-          element[i].innerHTML = element[i].innerHTML.toUpperCase();
+          console.log(element[i].innerHTML);
         }
       }
       printTagsP()
@@ -96,25 +87,35 @@
       function dinamicList(num){
         let elementList = document.getElementById("list");
         for(let i = 0; i < num; i += 1){
-          elementList.innerHTML = elementList.innerHTML + "<li></li>";
+          elementList.innerHTML = elementList.innerHTML + "<li>"+"</li>";
         }
 
-        let wholeList = document.getElementById.getElementsByTagName("li");
-        for(let index in wholeList){
-          if(index%2 === 0){
+        let wholeList = document.getElementById("list").getElementsByTagName("li");
+        for(let index = 0; index < wholeList.length; index += 1){
+          if(index % 2 === 0){
             wholeList[index].className = "par";
           }else{
             wholeList[index].className = "impar";
           }
         }
 
-        if(wholeList[index].className = "par"){
-          wholeList[index].className += "impar";
+        let lastIndex = wholeList.length - 1;
+
+        if(wholeList[lastIndex].className == "par"){
+          wholeList[lastIndex].classList.add("impar");
         }else{
-          wholeList[index].className += "par";
+          wholeList[lastIndex].classList.add("par");
         }
       }
-      dinamicList(5)
+      dinamicList(6)
+
+      function changeToUpperCase() {
+        let element = document.getElementsByTagName("p");
+        for(i in element){
+          element[i].innerHTML = element[i].innerHTML.toUpperCase();
+        } 
+      }
+      changeToUpperCase()
 
     </script>
   </body>
