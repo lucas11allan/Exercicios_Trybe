@@ -37,6 +37,11 @@
         <p>Trybe</p>
       </div>
     </div>
+    <div>
+      <ol id="list">
+
+      </ol>
+    </div>
     <script>
         /*
         Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
@@ -87,6 +92,29 @@
         }
       }
       printTagsP()
+
+      function dinamicList(num){
+        let elementList = document.getElementById("list");
+        for(let i = 0; i < num; i += 1){
+          elementList.innerHTML = elementList.innerHTML + "<li></li>";
+        }
+
+        let wholeList = document.getElementById.getElementsByTagName("li");
+        for(let index in wholeList){
+          if(index%2 === 0){
+            wholeList[index].className = "par";
+          }else{
+            wholeList[index].className = "impar";
+          }
+        }
+
+        if(wholeList[index].className = "par"){
+          wholeList[index].className += "impar";
+        }else{
+          wholeList[index].className += "par";
+        }
+      }
+      dinamicList(5)
 
     </script>
   </body>
