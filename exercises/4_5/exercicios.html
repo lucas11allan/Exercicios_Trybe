@@ -52,10 +52,29 @@
         */
 
       function changeText(text){
-        document.getElementById("description").innerHTML("text");
+        document.getElementById("description").innerHTML = text;
       }
+      changeText("Estarei empregado e viajando o Brasil todo")
 
-      changeText("Estarei empregado e viajando o Brasil todo");
+      function changeBGColor(){
+        let elementToChange = document.getElementsByClassName("main-content")[0];
+        elementToChange.style.backgroundColor = "#0fa36b";
+
+        elementToChange = document.getElementsByClassName("center-content")[0];
+        elementToChange.style.backgroundColor = "white";
+      }
+      changeBGColor()
+
+      function changeTitle() {
+        let elementToChange = document.getElementsByClassName("title")[0];
+        elementToChange.innerHTML = "Exercício 4.4 - JavaScript"; 
+      }
+      changeTitle()
+
+      function changeToUpperCase() {
+        
+      }
+      changeToUpperCase()
 
     </script>
   </body>
