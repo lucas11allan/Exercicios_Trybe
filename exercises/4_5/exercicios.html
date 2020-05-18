@@ -72,9 +72,21 @@
       changeTitle()
 
       function changeToUpperCase() {
+        let element = document.getElementsByTagName("p");
+        for(i in element){
+          console.log(element[i].innerHTML);
+        }
         
       }
       changeToUpperCase()
+
+      function printTagsP(){
+        let element = document.getElementsByTagName("p");
+        for(i in element){
+          element[i].innerHTML = element[i].innerHTML.toUpperCase();
+        }
+      }
+      printTagsP()
 
     </script>
   </body>
