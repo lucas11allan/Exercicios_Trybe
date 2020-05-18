@@ -111,7 +111,7 @@
 
       function changeToUpperCase() {
         let element = document.getElementsByTagName("p");
-        for(i in element){
+        for(let i = 0; i < element.length; i += 1){
           element[i].innerHTML = element[i].innerHTML.toUpperCase();
         } 
       }
