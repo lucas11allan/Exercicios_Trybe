@@ -71,12 +71,14 @@
       }
       insertDivClass("main-content");
 
-      function insertChildDivClass(classe){
+      function insertChildDivClass(parent, classe){
         let element = document.createElement("div");
         element.className = classe;
-        document.querySelectorAll(".main-content")[0].appendChild(element);
+        document.querySelectorAll(parent)[0].appendChild(element);
       }
-      insertChildDivClass("center-content");
+      insertChildDivClass(".main-content", "center-content");
+      insertChildDivClass(".center-content", "left-content");
+      insertChildDivClass(".center-content", "right-content");
 
       function insertP(){
         let element = document.createElement("p");
@@ -84,6 +86,13 @@
       }
       insertP();
 
+      function insertImage(parent, src, classe){
+        let element = document.createElement("img");
+        element.className = classe;
+        element.src = src;
+        document.querySelectorAll(parent)[0].appendChild(element);
+      }
+      insertImage(".left-content", "https://picsum.photos/200", "small-image");
 
     </script>
   </body>
