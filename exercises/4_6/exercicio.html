@@ -56,7 +56,15 @@
   </head>
   <body>
     <script>
-      // COLOQUE SEU CÓDIGO AQUI
+
+      function insertTitle(text){
+        let element = document.createElement("h1");
+        element = document.body.appendChild(element);
+        element.innerHTML = text;
+      }
+      insertTitle("Exercício 4.5 - JavaScript DOM");
+
+
     </script>
   </body>
 </html>
