@@ -59,11 +59,17 @@
 
       function insertTitle(text){
         let element = document.createElement("h1");
-        element = document.body.appendChild(element);
+        document.body.appendChild(element);
         element.innerHTML = text;
       }
       insertTitle("Exercício 4.5 - JavaScript DOM");
 
+      function insertDivClass(classe){
+        let element = document.createElement("div");
+        element.className = classe;
+        document.body.appendChild(element);
+      }
+      insertDivClass("main-content");
 
     </script>
   </body>
