@@ -1,0 +1,122 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 4.4</title>
+
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin: 0 auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="title">Exercício 4.4 - JavaEscripito </h1>
+    <div class="main-content">
+      <div class="center-content">
+        <p>Texto padrão do nosso site</p>
+        <p id="description">-----</p>
+        <p>Trybe</p>
+      </div>
+    </div>
+    
+    <ul id="list">
+
+    </ul>
+    
+    <script>
+        /*
+        Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
+        - document.getElementById()
+        - document.getElementsByClassName()
+        - document.getElementsByTagName()
+        1. Crie uma função que mude o texto na tag <p> para uma descrição de como você se vê daqui a 2 anos. (Não gaste tempo pensando no texto e sim realizando o exercício)
+        2. Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe.
+        3. Crie uma função que mude a cor do quadrado vermelho para branco.
+        4. Crie uma função que corrija o texto da tag <h1>.
+        5. Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
+        6. Crie uma função que exiba o conteúdo de todas as tags <p> no console.
+        */
+
+      function changeText(text){
+        document.getElementById("description").innerHTML = text;
+      }
+      changeText("Estarei empregado e viajando o Brasil todo")
+
+      function changeBGColor(){
+        let elementToChange = document.getElementsByClassName("main-content")[0];
+        elementToChange.style.backgroundColor = "#0fa36b";
+
+        elementToChange = document.getElementsByClassName("center-content")[0];
+        elementToChange.style.backgroundColor = "white";
+      }
+      changeBGColor()
+
+      function changeTitle() {
+        let elementToChange = document.getElementsByClassName("title")[0];
+        elementToChange.innerHTML = "Exercício 4.4 - JavaScript"; 
+      }
+      changeTitle()
+
+      function printTagsP(){
+        let element = document.getElementsByTagName("p");
+        for(i in element){
+          console.log(element[i].innerHTML);
+        }
+      }
+      printTagsP()
+
+      function dinamicList(num){
+        let elementList = document.getElementById("list");
+        for(let i = 0; i < num; i += 1){
+          elementList.innerHTML = elementList.innerHTML + "<li>"+"</li>";
+        }
+
+        let wholeList = document.getElementById("list").getElementsByTagName("li");
+        for(let index = 0; index < wholeList.length; index += 1){
+          if(index % 2 === 0){
+            wholeList[index].className = "par";
+          }else{
+            wholeList[index].className = "impar";
+          }
+        }
+
+        let lastIndex = wholeList.length - 1;
+
+        if(wholeList[lastIndex].className == "par"){
+          wholeList[lastIndex].classList.add("impar");
+        }else{
+          wholeList[lastIndex].classList.add("par");
+        }
+      }
+      dinamicList(6)
+
+      function changeToUpperCase() {
+        let element = document.getElementsByTagName("p");
+        for(let i = 0; i < element.length; i += 1){
+          element[i].innerHTML = element[i].innerHTML.toUpperCase();
+        } 
+      }
+      changeToUpperCase()
+
+    </script>
+  </body>
+</html>
