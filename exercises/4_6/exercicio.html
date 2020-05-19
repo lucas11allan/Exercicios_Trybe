@@ -71,6 +71,13 @@
       }
       insertDivClass("main-content");
 
+      function insertChildDivClass(classe){
+        let element = document.createElement("div");
+        element.className = classe;
+        document.querySelectorAll(".main-content")[0].appendChild(element);
+      }
+      insertChildDivClass("center-content");
+
     </script>
   </body>
 </html>
