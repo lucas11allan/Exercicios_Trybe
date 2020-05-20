@@ -57,12 +57,12 @@
   <body>
     <script>
 
-      function insertTitle(text){
+      function insertMainTitle(text){
         let element = document.createElement("h1");
-        document.body.appendChild(element);
         element.innerHTML = text;
+        document.body.appendChild(element); 
       }
-      insertTitle("Exercício 4.5 - JavaScript DOM");
+      insertMainTitle("Exercício 4.5 - JavaScript DOM");
 
       function insertDivClass(classe){
         let element = document.createElement("div");
