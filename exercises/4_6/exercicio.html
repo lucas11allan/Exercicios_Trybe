@@ -107,6 +107,14 @@
       }
       insertList(".right-content");
 
+      function insertTitle(parent, level, rep){
+        for(let i = 0; i < rep; i += 1){
+          let element = document.createElement(level);
+          document.querySelectorAll(parent)[0].appendChild(element);
+        }
+      }
+      insertTitle(".main-content", "h3", 3)
+
     </script>
   </body>
 </html>
