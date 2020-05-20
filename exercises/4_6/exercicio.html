@@ -94,6 +94,19 @@
       }
       insertImage(".left-content", "https://picsum.photos/200", "small-image");
 
+      function insertList(parent){
+        let element = document.createElement("ol");
+        document.querySelectorAll(parent)[0].appendChild(element);
+        let lista = ['um', 'dois', 'tres', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+
+        for(let index = 0; index < 10; index += 1){
+          let elementList = document.createElement("li");
+          document.querySelectorAll("ol")[0].appendChild(elementList);
+          document.querySelectorAll("li")[index].innerHTML = lista[index];
+        }
+      }
+      insertList(".right-content");
+
     </script>
   </body>
 </html>
