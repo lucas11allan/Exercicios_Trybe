@@ -47,17 +47,17 @@
     <button>Tell Me What Happened!</button>
     <audio id="audio" src="http://reboot-me.com/ouch.mp3" type="audio/mpeg"></audio>
     <script>
-      button1 = document.querySelectorAll("button")[0];
+      let button1 = document.querySelectorAll("button")[0];
       button1.addEventListener('click', goDark)
 
       var personName = "";
       let box = document.querySelector(".textEntry");
       box.addEventListener('keyup', typeAndScream);
 
-      button2 = document.querySelectorAll("button")[1];
+      let button2 = document.querySelectorAll("button")[1];
       button2.addEventListener('click', complainMessage);
 
-      button3 = document.querySelectorAll("button")[2];
+      let button3 = document.querySelectorAll("button")[2];
       button3.addEventListener('click', finishTheStory);
 
       function complainMessage() {
@@ -83,6 +83,7 @@
       function finishTheStory() {
         document.getElementById("story").innerHTML = "So I carefully searched the damp dungeon. There you are! I grinned a smile with all 98 of my gleaming teeth. Dinner time!";
       }
+      localStorage.setItem("Name", "Lucas Allan");
     </script>
   </body>
 </html>
