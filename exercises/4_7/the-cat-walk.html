@@ -12,18 +12,26 @@
  <script>
    let catImage = document.querySelector("img");
    catImage.style.marginLeft = "10px";
+   let direction = "forward";
 
    setInterval(catWalk, 50);
-    console.log(window.innerWidth);
    function catWalk(){
-
-    catImage.style.marginLeft = parseInt(catImage.style.marginLeft) + 10 + "px";
+    if(parseInt(catImage.style.marginLeft) < 0){
+      direction = "forward";
+      catImage.style.transform = "scaleX(1)";
+    }
+    
     if(parseInt(catImage.style.marginLeft) > window.innerWidth){
-      
+      direction = "backward";
+      catImage.style.transform = "scaleX(-1)";
+    }
 
-      
-      catImage.style.marginLeft = "10px";
+    if(direction === "forward"){
+      catImage.style.marginLeft = parseInt(catImage.style.marginLeft) + 10 + "px";
+    }else{
+      catImage.style.marginLeft = parseInt(catImage.style.marginLeft) - 10 + "px";
     }
    }
+
  </script>
 </html>
