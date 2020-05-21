@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Calculator</title>
+</head>
+<body>
+
+  <label>Square this number:
+    <input type="number" id="square-input" size="2">
+  </label>
+  <button id="square-button">Calculate</button>
+  <br><br>
+  
+  <label>Half this number:
+    <input type="number" id="half-input" size="2">
+  </label>
+  <button id="half-button">Calculate</button>
+  <br><br>
+  
+  <label>
+    Fraction:
+    <input type="number" id="percent1-input" size="2">
+  </label>
+  <label>
+    Whole:
+    <input type="number" id="percent2-input" size="2">
+  </label>
+  <button id="percent-button">Calculate</button>
+  <br><br>
+  
+  <label>Calculate area of circle with radius:
+    <input type="number" id="area-input" size="2">
+  </label>
+  <button id="area-button">Calculate</button> 
+  <br><br>
+  <div id="solution"></div>
+  <script>
+
+    let button1 = document.querySelector("#square-button").value;
+    let button2 = document.querySelector("#half-button").value;
+    let button3 = document.querySelector("#percent-button").value;
+    let button4 = document.querySelector("#sarea-button").value;
+
+    button1.addElementListener('click', squareNumber);
+    button2.addElementListener('click', halfNumber);
+    button3.addElementListener('click', percentOf);
+    button4.addElementListener('click', areaOfCircle);
+
+    function squareNumber(number){
+      
+      let result = number ** (1/2);
+
+    }
+    function halfNumber(number){
+
+      let result = number / 2;
+
+    }
+    function percentOf(number){
+
+      let result = (number1 / number2)*100;
+
+    }
+    function areaOfCircle(radius){
+
+      let result = 3.1416 * (radius ** 2);
+
+    }
+
+  </script>
+  
+</body>
+</html>
