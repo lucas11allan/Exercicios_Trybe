@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form action="" method="GET">
+    <fieldset>
+      <legend>Dados Pessoais</legend>
+      <label>Nome</label>
+      <input type="text" placeholder="Digite seu nome aqui" required="required" maxlength="40">
+      <br>
+      <label>E-mail</label>
+      <input id="email" name="email" type="text" required="required" maxlength="50">
+      <br>
+      <label>CPF</label>
+      <input id="cpf" name="cpf" type="text" required="required" maxlength="15">
+      <br>
+      <label>Endereço</label>
+      <input id="endereco" name="endereco" type="text" required="required" maxlength="200">
+      <br>
+      <label>Cidade</label>
+      <input id="cidade" name="cidade" type="text" required="required" maxlength="28">
+      <br>
+      <label>Estado</label>
+      <select id="estados" name="estados" required="required"></select>
+      <br>
+      <label>Tipo</label>
+      <br>
+      <input type="radio" name="tipo" id="casa" value="casa">
+      <label for="casa">Casa</label>
+      <input type="radio" name="tipo" id="apart" value="apart">
+      <label for="apart">Apartamento</label>
+    </fieldset>
+    <fieldset>
+      <legend>Último Emprego</legend>
+      <label>Resumo do Currículo</label>
+      <textarea id="resumo" name="resumo" required="required" maxlength="1000" cols="50" rows="10"></textarea>
+      <br>
+      <label>Cargo</label>
+      <input id="cargo" name="cargo" type="text" required="required" maxlength="40">
+      <br>
+      <label>Data de Início</label>
+    </fieldset>
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
