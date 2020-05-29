@@ -4,13 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
   <form action="" method="GET">
     <fieldset>
       <legend>Dados Pessoais</legend>
       <label>Nome</label>
-      <input type="text" placeholder="Digite seu nome aqui" required="required" maxlength="40">
+      <input type="text" id="nome" name="nome" placeholder="Digite seu nome aqui" required="required" maxlength="40">
       <br>
       <label>E-mail</label>
       <input id="email" name="email" type="text" required="required" maxlength="50">
@@ -43,8 +44,12 @@
       <input id="cargo" name="cargo" type="text" required="required" maxlength="40">
       <br>
       <label>Data de Início</label>
+      <input id="data-inicio" name="data-inicio" type="text" maxlength="10">
     </fieldset>
     <button type="submit">Submit</button>
+    <button type="button">Limpar</button>
+    <div id="dados-inseridos"></div>
   </form>
+  <script src="script.js"></script>
 </body>
 </html>
