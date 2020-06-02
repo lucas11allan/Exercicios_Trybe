@@ -1,0 +1,15 @@
+.container-form {
+  margin: 0 10%;
+  background-color: lightgray;
+  padding: 15px;
+}
+
+.container-text {
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  height: 60px;
+  background-color: lightskyblue;
+}
