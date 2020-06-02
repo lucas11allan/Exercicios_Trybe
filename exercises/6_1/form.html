@@ -8,59 +8,68 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+  <div class="header"></div>
   <div class="container-form">
+    <div class="container-text">
+      <h1 class="title" class="center">Formulário</h1>
+    </div>
     <form action="" method="GET">
-      <div class="field">
-        <h2>Dados Pessoais</h2>
-        <label class="label">Nome</label>
-        <div class="control">
-          <input class="input" type="text" id="nome" name="nome" placeholder="Digite seu nome aqui" required="required" maxlength="40">
-        </div>
-      </div>
-      <div class="field">  
-        <label>E-mail</label>
-        <input id="email" name="email" type="text" required="required" maxlength="50">
-      </div>
-      <div class="field">
-        <label>CPF</label>
-        <input id="cpf" name="cpf" type="text" required="required" maxlength="15">
-      </div>
-      <div class="field">
-        <label>Endereço</label>
-        <input id="endereco" name="endereco" type="text" required="required" maxlength="200">
-      </div>  
-      <div class="field">
-        <label>Cidade</label>
-        <input id="cidade" name="cidade" type="text" required="required" maxlength="28">
-      </div>
-      <div class="field">
-        <label>Estado</label>
-        <select id="estados" name="estados" required="required"></select>
-      </div>
-      <div class="field">  
-        <label>Tipo</label>
-        <input type="radio" name="tipo" id="casa" value="casa" checked>
-        <label for="casa">Casa</label>
-        <input type="radio" name="tipo" id="apart" value="apart">
-        <label for="apart">Apartamento</label>
-      </div>
-      
-        <h2>Último Emprego</h2>
+      <section class="section">
+        <h2 class="subtitle">Dados Pessoais</h2>
         <div class="field">
-          <label>Resumo do Currículo</label>
-          <textarea id="resumo" name="resumo" required="required" maxlength="1000" cols="50" rows="10"></textarea>
+          <label class="label">Nome</label>
+          <div class="control">
+            <input class="input" type="text" id="nome" name="nome" placeholder="Digite seu nome aqui" required="required" maxlength="40">
+          </div>
+        </div>
+        <div class="field">  
+          <label class="label">E-mail</label>
+          <input class="input" id="email" name="email" type="text" required="required" maxlength="50">
         </div>
         <div class="field">
-          <label>Cargo</label>
-          <input id="cargo" name="cargo" type="text" required="required" maxlength="40">
+          <label class="label">CPF</label>
+          <input class="input" id="cpf" name="cpf" type="text" required="required" maxlength="15">
         </div>
         <div class="field">
-          <label>Data de Início</label>
-          <input id="data-inicio" name="data-inicio" type="text" maxlength="10">
+          <label class="label">Endereço</label>
+          <input class="input" id="endereco" name="endereco" type="text" required="required" maxlength="200">
+        </div>  
+        <div class="field">
+          <label class="label">Cidade</label>
+          <input class="input" id="cidade" name="cidade" type="text" required="required" maxlength="28">
         </div>
-      <button type="submit" id="submit">Submit</button>
-      <button type="button">Limpar</button>
-      <div id="dados-inseridos"></div>
+        <div class="field">
+          <label class="label">Estado</label>
+          <select class="select" id="estados" name="estados" required="required"></select>
+        </div>
+        <div class="field">  
+          <label class="label">Tipo</label>
+          <input class="input" type="radio" name="tipo" id="casa" value="casa" checked>
+          <label class="label" for="casa">Casa</label>
+          <input class="input" type="radio" name="tipo" id="apart" value="apart">
+          <label class="label" for="apart">Apartamento</label>
+        </div>
+      </section>
+      <section class="section">  
+          <h2 class="subtitle">Último Emprego</h2>
+          <div class="field">
+            <label class="label">Resumo do Currículo</label>
+            <textarea class="textarea"id="resumo" name="resumo" required="required" maxlength="1000" cols="50" rows="10"></textarea>
+          </div>
+          <div class="field">
+            <label class="label">Cargo</label>
+            <input class="input" id="cargo" name="cargo" type="text" required="required" maxlength="40">
+          </div>
+          <div class="field">
+            <label class="label">Data de Início</label>
+            <input class="input" id="data-inicio" name="data-inicio" type="text" maxlength="10">
+          </div>
+      </section>
+      <section class="section">
+        <button class="button is-link" type="submit" id="submit">Submit</button>
+        <button class="button is-danger" type="button">Limpar</button>
+        <div id="dados-inseridos"></div>
+      </section>
     </form>
   </div>
   <script src="script.js"></script>
