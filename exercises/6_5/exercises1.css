@@ -4,11 +4,11 @@ body {
 }
 
 h1 {
-
+  font-size: 1em;
 }
 
 h2 {
-
+  font-size: 1em;
 }
 
 img {
@@ -16,5 +16,24 @@ img {
 }
 
 figure {
-	margin: 0;
+  margin: 0;
+  line-height: 1.5em;
+  padding: 5px;
+}
+
+.big {
+  font-size: 1.1em;
+}
+
+p {
+  max-width: 80vw;
+  margin: 0 auto;
+}
+
+@media (min-width: 1000px) {
+  .container-fotos {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
 }
