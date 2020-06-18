@@ -31,7 +31,7 @@ const people = [
 // escreva filterPeople abaixo
 const filterPeople = (objPeople) => {
   let arrayFilter = objPeople.filter(person => {
-    const {name, bornIn, nationality} = person;
+    const {bornIn, nationality} = person;
     if (bornIn < 2000 && nationality === 'Australian') {
       return person;
     }   
