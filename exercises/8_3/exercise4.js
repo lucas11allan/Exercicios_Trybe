@@ -30,11 +30,10 @@ const people = [
 
 // escreva filterPeople abaixo
 const filterPeople = (objPeople) => {
-  let arrayFilter = [];
-  objPeople.forEach(person => {
+  let arrayFilter = objPeople.filter(person => {
     const {name, bornIn, nationality} = person;
     if (bornIn < 2000 && nationality === 'Australian') {
-      arrayFilter.push({name, bornIn,nationality});
+      return person;
     }   
   });
   return arrayFilter; 
