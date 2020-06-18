@@ -1,6 +1,6 @@
 const assert = require('assert');
 
-const rectangleArea = (rectangle) => rectangle[0] * rectangle[1];
+const rectangleArea = (width, height) => width * height;
 
 const rectangle1 = [1, 2];
 const rectangle2 = [3, 5];
@@ -8,5 +8,5 @@ const rectangle3 = [6, 9];
 const rectangles = [rectangle1, rectangle2, rectangle3];
 
 for(rectangle of rectangles) {
-    assert.equal(rectangleArea(...rectangles), rectangle1[0]*rectangle1[1]) // altere a chamada da funcao rectangleArea
+    assert.equal(rectangleArea(...rectangle), rectangle[0]*rectangle[1]) // altere a chamada da funcao rectangleArea
 }
