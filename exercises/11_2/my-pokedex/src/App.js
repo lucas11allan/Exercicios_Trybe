@@ -1,18 +1,20 @@
 import React from 'react';
 import './App.css';
+import pokemons from './data';
 
 class CreatePokemon extends React.Component {
   render() {
+    const { name, type, averageWeight, image } = this.props.pokemon;
     return (
       <div className='PokemonContainer'>
         <div className="pokemonInformation">
-          <h1 className='PokemonName'>{this.props.name}</h1>
-          <h1 className='PokemonType'>{this.props.type}</h1>
+          <h1 className='PokemonName'>{name}</h1>
+          <h1 className='PokemonType'>{type}</h1>
           <h1 className='PokemonWeight'>
-            Average weight: {this.props.averageWeight.value} {this.props.averageWeight.measurement}</h1>
+            Average weight: {averageWeight.value} {averageWeight.measurement}</h1>
         </div>
         <div className="pokemonImage">
-          <img src={this.props.image}></img>
+          <img src={image}></img>
         </div>
       </div> 
     )
@@ -20,12 +22,21 @@ class CreatePokemon extends React.Component {
 }
 
 class CreatePokedex extends React.Component {
-  
+  render() {
+    const { pokemonsList } = this.props;
+    return (
+      <div className="pokedex">
+        {pokemonsList.map((pokemon, id) => <CreatePokemon key={id} pokemon={pokemon} />)}
+      </div>
+    )
+  }
 }
 
 function App() {
   return (
-
+    <div className="pokedex">
+      <CreatePokedex pokemonsList={pokemons} />
+    </div>
   );
 }
 
