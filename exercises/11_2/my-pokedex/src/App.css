@@ -37,14 +37,43 @@
   }
 }
 
+body {
+  background-color: #D3D3D3;
+}
+
 .PokemonContainer {
   display: flex;
   flex-direction: row;
-  border: 1px solid black;
+  border: 1px solid red;
+  margin: 25px 0;
+  background-color: white;
+  border-radius: 15px;
 }
 
 .pokedex {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 25px;
+}
+
+.pokemonInformation {
+  width: 250px;
+  padding-left: 10px;
+}
+
+.pokemonImage {
+  display: flex;
+  align-items: center;
+}
+
+.PokemonName {
+  font-size: 1.5em;
+  color: #1C1C1C;
+}
+
+.PokemonType, .PokemonWeight {
+  font-size: 1.3em;
+  color: DimGray;
 }

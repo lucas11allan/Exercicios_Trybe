@@ -11,10 +11,10 @@ class CreatePokemon extends React.Component {
           <h1 className='PokemonName'>{name}</h1>
           <h1 className='PokemonType'>{type}</h1>
           <h1 className='PokemonWeight'>
-            Average weight: {averageWeight.value} {averageWeight.measurement}</h1>
+            Average weight: {averageWeight.value} {averageWeight.measurementUnit}</h1>
         </div>
         <div className="pokemonImage">
-          <img src={image} alt=""></img>
+          <img src={image} alt="" width="120px"></img>
         </div>
       </div> 
     )
