@@ -77,3 +77,10 @@ body {
   font-size: 1.3em;
   color: DimGray;
 }
+
+.title {
+  text-align: center;
+  text-shadow: 5px 5px 2px white;
+  font-size: 3em;
+  color: #4169E1;
+}
