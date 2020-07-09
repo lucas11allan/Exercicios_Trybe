@@ -1,25 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+class CreatePokemon extends React.Component {
+  render() {
+    return (
+      <div className='PokemonContainer'>
+        <div className="pokemonInformation">
+          <h1 className='PokemonName'>{this.props.name}</h1>
+          <h1 className='PokemonType'>{this.props.type}</h1>
+          <h1 className='PokemonWeight'>
+            Average weight: {this.props.averageWeight.value} {this.props.averageWeight.measurement}</h1>
+        </div>
+        <div className="pokemonImage">
+          <img src={this.props.image}></img>
+        </div>
+      </div> 
+    )
+  }
+}
+
+class CreatePokedex extends React.Component {
+  
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
   );
 }
 
