@@ -14,7 +14,7 @@ class CreatePokemon extends React.Component {
             Average weight: {averageWeight.value} {averageWeight.measurement}</h1>
         </div>
         <div className="pokemonImage">
-          <img src={image}></img>
+          <img src={image} alt=""></img>
         </div>
       </div> 
     )

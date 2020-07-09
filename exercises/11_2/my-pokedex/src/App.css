@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+.PokemonContainer {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid black;
+}
+
+.pokedex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
