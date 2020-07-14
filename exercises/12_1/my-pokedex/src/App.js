@@ -1,6 +1,9 @@
 import React from 'react';
 import './App.css';
 import pokemons from './data';
+const pokemonTypes = pokemons.map((pokemon) => pokemon.type);
+const filteredTypes = pokemonTypes.filter((este, i) => pokemonTypes.indexOf(este) === i);
+
 
 class CreatePokemon extends React.Component {
   render() {
@@ -84,7 +87,7 @@ class App extends React.Component {
         pokemonPosition: 0,
         pokemonList: filteredList,
       });
-    } 
+    }
   }
 
   render() {
@@ -92,16 +95,14 @@ class App extends React.Component {
       <div className='pokedex'>
         <h1 className='title'>Pokedex</h1>
         <CreatePokemon pokemon={this.state.pokemonList[this.state.pokemonPosition]} />
-        <div className="buttons">
+        <div className="buttonsContainer">
           <CreateButton label='<' handleClick={this.setPokemonPosition} forward={false} />
           <CreateButton label='>' handleClick={this.setPokemonPosition} forward={true} />
         </div>
         <div className="filterButtons">
-          <CreateButtonFilter label="Fire" function={this.setPokemonList} />
-          <CreateButtonFilter label="Psychic" function={this.setPokemonList} />
-          <CreateButtonFilter label="All" function={this.setPokemonList} />
+          {filteredTypes.map(type => <CreateButtonFilter className="button" label={type} function={this.setPokemonList} />)}
+          <CreateButtonFilter className="button" label="All" function={this.setPokemonList} />
         </div>
-
       </div>
     );
   }

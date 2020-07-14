@@ -48,13 +48,15 @@ body {
   margin: 25px 0;
   background-color: white;
   border-radius: 15px;
+  width: 300px;
 }
 
 .pokedex {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
   margin: 25px;
 }
 
@@ -84,3 +86,15 @@ body {
   font-size: 3em;
   color: #4169E1;
 }
+
+.filterButtons, .buttonsContainer {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+.button {
+  margin:5px;
+}
+
+
