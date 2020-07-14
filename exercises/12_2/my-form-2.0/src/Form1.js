@@ -1,6 +1,6 @@
 import React from 'react';
 
-const listaEstados = ['MG', 'SP', 'RJ'];
+const listaEstados = ["AC", "AL", "AM", "AP", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RO", "RS", "RR", "SC", "SE", "SP", "TO"];
 
 class Form1 extends React.Component {
   constructor(props) {
@@ -49,12 +49,25 @@ class Form1 extends React.Component {
             </label>
             <label>
               Estado:{' '}
-              <select required value={this.state.estado} onChange={this.handleChange}>
+              <select required value={this.state.estado} name='estado' onChange={this.handleChange}>
                 {listaEstados.map((estado, i) => (
                   <option key={i} value={estado}>{estado}</option>
                 ))}
               </select>
             </label>
+            <fieldset>
+              <label>
+                Tipo: {' '}
+                <label for='casa'>
+                  <input id='casa' type='radio' value='casa' name='tipo' onChange={this.handleChange} />
+                  Casa
+                </label>
+                <label for='apartamento'>
+                  <input id='apartamento' type='radio' value='apartamento' name='tipo' onChange={this.handleChange} />
+                  Apartamento
+                </label>
+              </label>
+            </fieldset>
           </fieldset>
           <fieldset>
 
