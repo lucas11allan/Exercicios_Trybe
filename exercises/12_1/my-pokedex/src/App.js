@@ -32,6 +32,7 @@ class CreateButton extends React.Component {
         onClick={() => {
           this.props.handleClick(this.props.forward);
         }}
+        disabled={this.props.status}
       >
         {this.props.label}
       </button>
@@ -59,6 +60,7 @@ class App extends React.Component {
     this.state = {
       pokemonPosition: 0,
       pokemonList: pokemons,
+      buttonStatus: false,
     };
   }
 
@@ -78,15 +80,20 @@ class App extends React.Component {
     this.setState({ pokemonPosition: position });
   };
 
-  setPokemonList = (type) => {
+  setPokemonList = async (type) => {
     const filteredList = pokemons.filter(pokemon => pokemon.type === type);
     if (type === 'All') {
-      this.setState({ pokemonPosition: 0, pokemonList: pokemons });
+      await this.setState({ pokemonPosition: 0, pokemonList: pokemons });
     } else {
-      this.setState({
+      await this.setState({
         pokemonPosition: 0,
         pokemonList: filteredList,
       });
+    }
+    if (this.state.pokemonList.length <= 1) {
+      this.setState({buttonStatus: true});
+    } else {
+      this.setState({buttonStatus: false});
     }
   }
 
@@ -96,11 +103,11 @@ class App extends React.Component {
         <h1 className='title'>Pokedex</h1>
         <CreatePokemon pokemon={this.state.pokemonList[this.state.pokemonPosition]} />
         <div className="buttonsContainer">
-          <CreateButton label='<' handleClick={this.setPokemonPosition} forward={false} />
-          <CreateButton label='>' handleClick={this.setPokemonPosition} forward={true} />
+          <CreateButton label='<' handleClick={this.setPokemonPosition} forward={false} status={this.state.buttonStatus}/>
+          <CreateButton label='>' handleClick={this.setPokemonPosition} forward={true} status={this.state.buttonStatus} />
         </div>
         <div className="filterButtons">
-          {filteredTypes.map(type => <CreateButtonFilter className="button" label={type} function={this.setPokemonList} />)}
+          {filteredTypes.map(type => <CreateButtonFilter key={type} className="button" label={type} function={this.setPokemonList} />)}
           <CreateButtonFilter className="button" label="All" function={this.setPokemonList} />
         </div>
       </div>
