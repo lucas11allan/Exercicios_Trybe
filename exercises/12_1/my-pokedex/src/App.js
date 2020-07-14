@@ -4,7 +4,6 @@ import pokemons from './data';
 const pokemonTypes = pokemons.map((pokemon) => pokemon.type);
 const filteredTypes = pokemonTypes.filter((este, i) => pokemonTypes.indexOf(este) === i);
 
-
 class CreatePokemon extends React.Component {
   render() {
     const { name, type, averageWeight, image } = this.props.pokemon;
@@ -45,12 +44,12 @@ class CreateButtonFilter extends React.Component {
     return (
       <button
         onClick={() => {
-          this.props.function(this.props.label)
+          this.props.function(this.props.label);
         }}
       >
         {this.props.label}
       </button>
-    )
+    );
   }
 }
 
@@ -81,7 +80,7 @@ class App extends React.Component {
   };
 
   setPokemonList = async (type) => {
-    const filteredList = pokemons.filter(pokemon => pokemon.type === type);
+    const filteredList = pokemons.filter((pokemon) => pokemon.type === type);
     if (type === 'All') {
       await this.setState({ pokemonPosition: 0, pokemonList: pokemons });
     } else {
@@ -91,24 +90,41 @@ class App extends React.Component {
       });
     }
     if (this.state.pokemonList.length <= 1) {
-      this.setState({buttonStatus: true});
+      this.setState({ buttonStatus: true });
     } else {
-      this.setState({buttonStatus: false});
+      this.setState({ buttonStatus: false });
     }
-  }
+  };
 
   render() {
     return (
       <div className='pokedex'>
         <h1 className='title'>Pokedex</h1>
         <CreatePokemon pokemon={this.state.pokemonList[this.state.pokemonPosition]} />
-        <div className="buttonsContainer">
-          <CreateButton label='<' handleClick={this.setPokemonPosition} forward={false} status={this.state.buttonStatus}/>
-          <CreateButton label='>' handleClick={this.setPokemonPosition} forward={true} status={this.state.buttonStatus} />
+        <div className='buttonsContainer'>
+          <CreateButton
+            label='<'
+            handleClick={this.setPokemonPosition}
+            forward={false}
+            status={this.state.buttonStatus}
+          />
+          <CreateButton
+            label='>'
+            handleClick={this.setPokemonPosition}
+            forward={true}
+            status={this.state.buttonStatus}
+          />
         </div>
-        <div className="filterButtons">
-          {filteredTypes.map(type => <CreateButtonFilter key={type} className="button" label={type} function={this.setPokemonList} />)}
-          <CreateButtonFilter className="button" label="All" function={this.setPokemonList} />
+        <div className='filterButtons'>
+          {filteredTypes.map((type) => (
+            <CreateButtonFilter
+              key={type}
+              className='button'
+              label={type}
+              function={this.setPokemonList}
+            />
+          ))}
+          <CreateButtonFilter className='button' label='All' function={this.setPokemonList} />
         </div>
       </div>
     );
