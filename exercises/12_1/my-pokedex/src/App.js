@@ -9,7 +9,7 @@ class CreateButton extends React.Component {
   render() {
     return (
       <button
-      className="button button-move"
+        className='button button-move'
         onClick={() => {
           this.props.handleClick(this.props.forward);
         }}
@@ -40,10 +40,10 @@ const changeClass = (type) => {
   const buttons = document.getElementsByClassName('button');
   for (let i = 0; i < buttons.length; i += 1) {
     buttons[i].classList.remove('buttonSelected');
-  }  
-  const button = document.getElementsByClassName(type);
-  button[0].classList.add('buttonSelected');
-}
+  }
+  const button = document.querySelector(`.${type}`);
+  button.classList.add('buttonSelected');
+};
 
 class App extends React.Component {
   constructor(props) {
@@ -110,11 +110,7 @@ class App extends React.Component {
         </div>
         <div className='filterButtons'>
           {filteredTypes.map((type) => (
-            <CreateButtonFilter
-              key={type}
-              label={type}
-              function={this.setPokemonList}
-            />
+            <CreateButtonFilter key={type} label={type} function={this.setPokemonList} />
           ))}
           <CreateButtonFilter className='button' label='All' function={this.setPokemonList} />
         </div>
