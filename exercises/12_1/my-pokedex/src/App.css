@@ -95,6 +95,17 @@ body {
 
 .button {
   margin:5px;
+  font-size: 1.3em;
 }
 
+.buttonSelected {
+  margin: 2px solid black;
+  color:white;
+  background-color: green;
+}
+
+.button-move {
+  width:40px;
+  height: 40px
+}
 

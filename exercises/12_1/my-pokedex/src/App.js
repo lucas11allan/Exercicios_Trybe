@@ -1,33 +1,15 @@
 import React from 'react';
 import './App.css';
 import pokemons from './data';
+import CreatePokemon from './CreatePokemon';
 const pokemonTypes = pokemons.map((pokemon) => pokemon.type);
 const filteredTypes = pokemonTypes.filter((este, i) => pokemonTypes.indexOf(este) === i);
-
-class CreatePokemon extends React.Component {
-  render() {
-    const { name, type, averageWeight, image } = this.props.pokemon;
-    return (
-      <div className='PokemonContainer'>
-        <div className='pokemonInformation'>
-          <h1 className='PokemonName'>{name}</h1>
-          <h1 className='PokemonType'>{type}</h1>
-          <h1 className='PokemonWeight'>
-            Average weight: {averageWeight.value} {averageWeight.measurementUnit}
-          </h1>
-        </div>
-        <div className='pokemonImage'>
-          <img src={image} alt='' width='120px'></img>
-        </div>
-      </div>
-    );
-  }
-}
 
 class CreateButton extends React.Component {
   render() {
     return (
       <button
+      className="button button-move"
         onClick={() => {
           this.props.handleClick(this.props.forward);
         }}
@@ -43,6 +25,7 @@ class CreateButtonFilter extends React.Component {
   render() {
     return (
       <button
+        className={`button ${this.props.label}`}
         onClick={() => {
           this.props.function(this.props.label);
         }}
@@ -51,6 +34,15 @@ class CreateButtonFilter extends React.Component {
       </button>
     );
   }
+}
+
+const changeClass = (type) => {
+  const buttons = document.getElementsByClassName('button');
+  for (let i = 0; i < buttons.length; i += 1) {
+    buttons[i].classList.remove('buttonSelected');
+  }  
+  const button = document.getElementsByClassName(type);
+  button[0].classList.add('buttonSelected');
 }
 
 class App extends React.Component {
@@ -94,6 +86,7 @@ class App extends React.Component {
     } else {
       this.setState({ buttonStatus: false });
     }
+    changeClass(type);
   };
 
   render() {
@@ -119,7 +112,6 @@ class App extends React.Component {
           {filteredTypes.map((type) => (
             <CreateButtonFilter
               key={type}
-              className='button'
               label={type}
               function={this.setPokemonList}
             />
