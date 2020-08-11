@@ -31,7 +31,7 @@ class Clients extends React.Component {
       <div>
         {clients.map(client => {
           return(
-          <div>
+          <div className="solid-border" key={client.email}>
             <div>Nome: {client.nome}</div>
             <div>Email: {client.email}</div>
             <div>Idade: {client.idade}</div>

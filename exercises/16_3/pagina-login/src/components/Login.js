@@ -18,7 +18,7 @@ class Login extends React.Component {
   }
 
   handleClick = () => {
-    const {email, senha } = this.state;
+    const { email, senha } = this.state;
     this.props.tryLogin(email, senha);
   }
 
@@ -30,10 +30,12 @@ class Login extends React.Component {
           <label>
             Email:
             <input name="email" onChange={this.handleChange} type="text" />
+            <p className={`display ${this.props.invalidEmail}`}>Email Inválido</p>
           </label>
           <label>
             Senha:
             <input name="senha" onChange={this.handleChange} type="password" />
+            <p className={`display ${this.props.invalidPassword}`}>Senha Incorreta</p>
           </label>
           <button type="button" onClick={this.handleClick}>Entrar</button>
         </form>
@@ -48,6 +50,8 @@ const mapDispatchToProps = dispatch => ({
 
 const mapStateToProps = state => ({
   logged: state.verifyLogin.logged,
+  invalidEmail: state.verifyLogin.invalidEmail,
+  invalidPassword: state.verifyLogin.invalidPassword,
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Login);

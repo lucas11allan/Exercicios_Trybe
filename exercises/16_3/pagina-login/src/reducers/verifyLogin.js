@@ -7,18 +7,19 @@ const INITIAL_STATE = {
   email: '',
   senha: '',
   logged: false,
+  invalidEmail: false,
+  invalidPassword: false,
 };
 
 const verifyLogin = (state=INITIAL_STATE, action) => {
   switch (action.type) {
     case 'TRY_LOGIN':
       const user = users.find(e => e.email === action.email);
-      console.log(action);
-      if (user.password == action.senha) {
-        console.log(user);
-        return { ...state, logged: true}
+      if (!user) return { ...state, invalidEmail: true, invalidPassword: false };
+      if (user.password === action.senha) {
+        return { ...state, logged: true, invalidEmail: false, invalidPassword: false };
       } else {
-        return state;
+        return { ...state, invalidPassword: true, invalidEmail: false };
       }
     default:
       return state;
